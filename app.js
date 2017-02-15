@@ -8,11 +8,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-    res.render("about")
+    res.render("about");
 });
 
 app.get('/:query', function(req, res) {
-    res.send("Welcome to the " + req.params.query + " page!");
+    res.render("welcome", {query: req.params.query});
 });
 
 app.get("/repeat/:message/:times", function(req, res) {
