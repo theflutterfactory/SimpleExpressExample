@@ -11,6 +11,17 @@ app.get('/about', function(req, res) {
     res.render("about");
 });
 
+app.get('/seasons', function(req, res) {
+   var seasons = [
+       {name: "Summer", weather: "Sunny"},
+       {name: "Winter", weather: "Cold"},
+       {name: "Fall", weather: "Windy"},
+       {name: "Spring", weather: "Rainy"},
+    ]; 
+    
+    res.render("seasons", {seasons: seasons});
+});
+
 app.get('/:query', function(req, res) {
     res.render("welcome", {query: req.params.query});
 });
