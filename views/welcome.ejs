@@ -1,5 +1,9 @@
+<% include partials/header %>
+
 <h1>Welcome to the <%= query %> page!</h1>
 
 <% if(query.toLowerCase() === "testing") { %>
     <p>Testing ejs logic!</p>
 <% } %>
+
+<% include partials/footer %>
