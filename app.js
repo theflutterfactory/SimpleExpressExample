@@ -24,6 +24,15 @@ app.get('/seasons', function(req, res) {
     res.render("seasons", {seasons: seasons});
 });
 
+app.post('/addfriend', function(req, res) {
+    res.send("post route");
+});
+
+app.get('/friends', function(req, res) {
+    var friends = ["Steven", "Shudeep", "Brent", "Erica", "Geoff", "Logan"];
+    res.render("friends", {friends: friends});
+});
+
 app.get('/:query', function(req, res) {
     res.render("welcome", {query: req.params.query});
 });
